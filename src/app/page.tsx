@@ -1,19 +1,33 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Header } from "@/components/header"
 import { TaskInput } from "@/components/task-input"
 import { TaskList } from "@/components/task-list"
 import { EmptyState } from "@/components/empty-state"
-
-export interface Task {
-  id: string
-  text: string
-  completed: boolean
-}
+import type { Task } from "@/lib/types"
 
 export default function TodoApp() {
   const [tasks, setTasks] = useState<Task[]>([])
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    const savedTasks = localStorage.getItem("todo-tasks")
+    if (savedTasks) {
+      try {
+        setTasks(JSON.parse(savedTasks))
+      } catch (error) {
+        console.error("Error loading tasks from localStorage:", error)
+      }
+    }
+    setIsLoaded(true)
+  }, [])
+
+  useEffect(() => {
+    if (isLoaded) {
+      localStorage.setItem("todo-tasks", JSON.stringify(tasks))
+    }
+  }, [tasks, isLoaded])
 
   const addTask = (text: string) => {
     const newTask: Task = {
@@ -34,6 +48,14 @@ export default function TodoApp() {
 
   const createdTasks = tasks.filter((task) => !task.completed)
   const completedTasks = tasks.filter((task) => task.completed)
+
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+        <div className="text-gray-400">Carregando...</div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">

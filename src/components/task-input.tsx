@@ -32,7 +32,7 @@ export function TaskInput({ onAddTask }: TaskInputProps) {
       />
       <Button
         type="submit"
-        className="bg-blue-600 h-full hover:bg-blue-700 text-white px-6 py-3.5 rounded-lg font-bold flex items-center gap-2 transition-colors"
+        className="bg-blue-600 h-full  cursor-pointer hover:bg-blue-700 text-white px-6 py-3.5 rounded-lg font-bold flex items-center gap-2 transition-colors"
       >
         Criar
         <Plus className="w-4 h-4" />

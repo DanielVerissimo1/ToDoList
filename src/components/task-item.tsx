@@ -1,7 +1,7 @@
 "use client"
 
 import { Check, Trash2 } from "lucide-react"
-import type { Task } from "@/app/page"
+import type { Task } from "@/lib/types"
 import { Button } from "@/components/ui/button"
 
 interface TaskItemProps {
@@ -28,7 +28,7 @@ export function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
         onClick={onDelete}
         variant="ghost"
         size="sm"
-        className="text-gray-400 hover:text-red-400 hover:bg-gray-600 p-2"
+        className="text-gray-400 hover:text-red-400 cursor-pointer hover:bg-gray-600 p-2"
       >
         <Trash2 className="w-4 h-4" />
       </Button>

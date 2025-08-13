@@ -1,7 +1,7 @@
 "use client"
 
 import { TaskItem } from "./task-item"
-import type { Task } from "@/app/page"
+import type { Task } from "@/lib/types"
 
 interface TaskListProps {
   tasks: Task[]
