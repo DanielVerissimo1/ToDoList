@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ToDo App",
   description: "Organize suas tarefas de forma simples e eficiente",
-  generator: "v0.app",
+  generator: "rocket.svg",
 }
 
 
