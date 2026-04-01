@@ -46,19 +46,18 @@ export default function TodoApp() {
     setTasks(tasks.filter((task) => task.id !== id))
   }
 
-  const createdTasks = tasks.filter((task) => !task.completed)
   const completedTasks = tasks.filter((task) => task.completed)
 
   if (!isLoaded) {
     return (
-      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
-        <div className="text-gray-400">Carregando...</div>
+      <div className="min-h-screen bg-[#0D0D0D] flex items-center justify-center">
+        <div className="text-[#808080]">Carregando...</div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-[#0D0D0D]">
       <div className="max-w-3xl mx-auto px-4 py-8">
         <Header />
         <TaskInput onAddTask={addTask} />
@@ -66,14 +65,14 @@ export default function TodoApp() {
         <div className="mt-16">
           <div className="flex justify-between items-center mb-6">
             <div className="flex items-center gap-2">
-              <span className="text-blue-400 font-bold">Tarefas criadas</span>
-              <span className="bg-gray-700 text-white px-2 py-1 rounded-full text-sm font-bold">
-                {createdTasks.length}
+              <span className="text-[#4EA8DE] text-sm font-bold">Tarefas criadas</span>
+              <span className="bg-[#333333] text-[#D9D9D9] px-2 py-0.5 rounded-full text-xs font-bold">
+                {tasks.length}
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-purple-400 font-bold">Concluídas</span>
-              <span className="bg-gray-700 text-white px-2 py-1 rounded-full text-sm font-bold">
+              <span className="text-[#8284FA] text-sm font-bold">Concluídas</span>
+              <span className="bg-[#333333] text-[#D9D9D9] px-2 py-0.5 rounded-full text-xs font-bold">
                 {tasks.length > 0 ? `${completedTasks.length} de ${tasks.length}` : "0"}
               </span>
             </div>

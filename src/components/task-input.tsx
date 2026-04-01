@@ -1,10 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
-import { Plus } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { PlusCircle } from "lucide-react"
 
 interface TaskInputProps {
   onAddTask: (text: string) => void
@@ -28,15 +26,15 @@ export function TaskInput({ onAddTask }: TaskInputProps) {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
         placeholder="Adicione uma nova tarefa"
-        className="flex-1 bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        className="flex-1 bg-[#262626] border border-[#333333] rounded-lg px-4 py-3 text-[#F2F2F2] placeholder-[#808080] text-sm focus:outline-none focus:border-[#8284FA] transition-colors"
       />
-      <Button
+      <button
         type="submit"
-        className="bg-blue-600 h-full  cursor-pointer hover:bg-blue-700 text-white px-6 py-3.5 rounded-lg font-bold flex items-center gap-2 transition-colors"
+        className="bg-[#1E6F9F] hover:bg-[#4EA8DE] text-[#F2F2F2] px-4 py-3 rounded-lg font-bold text-sm flex items-center gap-2 transition-colors cursor-pointer"
       >
         Criar
-        <Plus className="w-4 h-4" />
-      </Button>
+        <PlusCircle className="w-4 h-4" />
+      </button>
     </form>
   )
 }

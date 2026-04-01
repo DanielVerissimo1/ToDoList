@@ -2,7 +2,6 @@
 
 import { Check, Trash2 } from "lucide-react"
 import type { Task } from "@/lib/types"
-import { Button } from "@/components/ui/button"
 
 interface TaskItemProps {
   task: Task
@@ -12,26 +11,32 @@ interface TaskItemProps {
 
 export function TaskItem({ task, onToggle, onDelete }: TaskItemProps) {
   return (
-    <div className="bg-gray-700 border border-gray-600 rounded-lg p-4 flex items-center gap-3">
+    <div className="bg-[#262626] border border-[#333333] rounded-lg p-4 flex items-start gap-3">
       <button
         onClick={onToggle}
-        className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
-          task.completed ? "bg-purple-600 border-purple-600 text-white" : "border-blue-400 hover:border-blue-300"
+        className={`mt-0.5 w-5 h-5 rounded-full border-2 flex-shrink-0 flex items-center justify-center transition-colors cursor-pointer ${
+          task.completed
+            ? "bg-[#5E60CE] border-[#5E60CE] hover:bg-[#8284FA] hover:border-[#8284FA]"
+            : "border-[#4EA8DE] hover:border-[#8284FA] hover:bg-[#8284FA]/10"
         }`}
       >
-        {task.completed && <Check className="w-3 h-3" />}
+        {task.completed && <Check className="w-3 h-3 text-white" strokeWidth={3} />}
       </button>
 
-      <span className={`flex-1 ${task.completed ? "text-gray-400 line-through" : "text-white"}`}>{task.text}</span>
+      <span
+        className={`flex-1 text-sm leading-relaxed ${
+          task.completed ? "text-[#808080] line-through" : "text-[#F2F2F2]"
+        }`}
+      >
+        {task.text}
+      </span>
 
-      <Button
+      <button
         onClick={onDelete}
-        variant="ghost"
-        size="sm"
-        className="text-gray-400 hover:text-red-400 cursor-pointer hover:bg-gray-600 p-2"
+        className="text-[#808080] hover:text-[#E25858] p-1 rounded transition-colors cursor-pointer flex-shrink-0"
       >
         <Trash2 className="w-4 h-4" />
-      </Button>
+      </button>
     </div>
   )
 }
