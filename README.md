@@ -59,19 +59,35 @@
 
 ```bash
 ToDoList
+├── public/                     # Arquivos estáticos
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── rocket.svg              # Logo do projeto
+│   ├── vercel.svg
+│   └── window.svg
 │
-├── public
-│   ├── rocket.svg          # Logo do projeto
-│   └── (outros assets)
+├── src/
+│   └── app/                    # App Router do Next.js
+│       ├── favicon.ico
+│       ├── globals.css
+│       ├── layout.tsx
+│       ├── page.tsx
+│       │
+│       └── components/         # Componentes do projeto
+│           ├── Header.tsx
+│           ├── Task.tsx
+│           ├── TaskInput.tsx
+│           └── TaskList.tsx
 │
-├── src
-│   └── app                 # App Router do Next.js
-│       ├── page.tsx        # Página principal
-│       ├── layout.tsx      # Layout raiz
-│       └── globals.css     # Estilos globais
-│
-├── Thumbnail.png           # Thumbnail do projeto na raiz
-├── package.json
+├── Thumbnail.png               
+├── .gitignore
+├── components.json             
+├── eslint.config.mjs
 ├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── tailwind.config.js          # Configuração do Tailwind CSS
 ├── tsconfig.json
-└── tailwind.config.js
+└── README.md
