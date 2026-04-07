@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center"> 
+  <img width="42" height="42" alt="logo" src="https://raw.githubusercontent.com/DanielVerissimo1/ToDoList/main/public/rocket.svg" />
+  <br>
+  ToDo List
+  <p>
+    <img src="https://img.shields.io/github/last-commit/DanielVerissimo1/ToDoList?style=for-the-badge&logo=git&logoColor=white&color=6B73FF" alt="Last Commit">
+    <img src="https://img.shields.io/github/languages/top/DanielVerissimo1/ToDoList?style=for-the-badge&color=6B73FF" alt="Top Language">
+    <img src="https://img.shields.io/github/languages/count/DanielVerissimo1/ToDoList?style=for-the-badge&color=000DFF" alt="Languages Count">
+  </p>
+</h1>
 
-## Getting Started
+**ToDo List** é um projeto de gerenciamento de tarefas desenvolvido com **Next.js**, baseado nos conceitos fundamentais do React. O objetivo é aplicar na prática a construção de uma aplicação completa, moderna e performática.
 
-First, run the development server:
+---
+
+## 📸 Visualização do Projeto
+
+<p align="center">
+  <img alt="preview" src="https://raw.githubusercontent.com/DanielVerissimo1/ToDoList/main/Thumbnail.png" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</p>
+
+---
+
+## 🚀 Funcionalidades
+
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| ➕ **Adicionar tarefas** | Crie novas tarefas na lista principal |
+| ✅ **Concluir tarefas** | Marque tarefas como concluídas/ pendentes |
+| ❌ **Remover tarefas** | Exclua tarefas indesejadas da lista |
+| 📊 **Progresso** | Acompanhe o contador de tarefas criadas e concluídas |
+| 🔄 **Atualização dinâmica** | Interface reage instantaneamente às ações do usuário |
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+</div>
+
+---
+
+## 📚 Conceitos aplicados
+
+- Componentes funcionais com React e Next.js (App Router)
+- Manipulação de estado com `useState` e hooks
+- Tipagem estática com TypeScript
+- Roteamento e estrutura de pastas do Next.js 14+
+- Estilização com Tailwind CSS
+- Deploy integrado com a plataforma Vercel
+
+---
+
+## 📁 Arquitetura do projeto
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ToDoList
+│
+├── public
+│   ├── rocket.svg          # Logo do projeto
+│   └── (outros assets)
+│
+├── src
+│   └── app                 # App Router do Next.js
+│       ├── page.tsx        # Página principal
+│       ├── layout.tsx      # Layout raiz
+│       └── globals.css     # Estilos globais
+│
+├── Thumbnail.png           # Thumbnail do projeto na raiz
+├── package.json
+├── next.config.ts
+├── tsconfig.json
+└── tailwind.config.js
