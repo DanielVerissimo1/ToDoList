@@ -1,13 +1,12 @@
-<h1 align="center"> 
-  <img width="42" height="42" alt="logo" src="https://raw.githubusercontent.com/DanielVerissimo1/ToDoList/main/public/rocket.svg" />
-  <br>
-  ToDo List
+<div align="center"> 
+  <img width="62" height="62" alt="logo" src="https://raw.githubusercontent.com/DanielVerissimo1/ToDoList/main/public/rocket.svg" />
+<h1>ToDo List</h1>
   <p>
     <img src="https://img.shields.io/github/last-commit/DanielVerissimo1/ToDoList?style=for-the-badge&logo=git&logoColor=white&color=6B73FF" alt="Last Commit">
     <img src="https://img.shields.io/github/languages/top/DanielVerissimo1/ToDoList?style=for-the-badge&color=6B73FF" alt="Top Language">
     <img src="https://img.shields.io/github/languages/count/DanielVerissimo1/ToDoList?style=for-the-badge&color=000DFF" alt="Languages Count">
   </p>
-</h1>
+</div>
 
 **ToDo List** é um projeto de gerenciamento de tarefas desenvolvido com **Next.js**, baseado nos conceitos fundamentais do React. O objetivo é aplicar na prática a construção de uma aplicação completa, moderna e performática.
 
